@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function Cal(NumInput) {
+        var sum = 1;
+        for (var i = 1; i <= NumInput; i++) {
+          sum *= i;
+        }
+        return sum;
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      while (true) {
+        /*無窮迴圈*/
+        var NumInput = Number(window.prompt("請輸正整數：", ""));
+        if (!Number.isInteger(NumInput)) {
+          alert("警語：此數值非正整數");
+        } else {
+          document.write(NumInput + "!=" + Cal(NumInput));
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>
